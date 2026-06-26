@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enfoque Dominical — Lección de lectura | El Papa, el Presidente, la paz y la IA</title>
+<style>
+  :root{
+    --paper:#FBFAF6; --ink:#1A1D24; --soft:#5C6270; --hair:#E4E0D6;
+    --navy:#1B2A4A; --gold:#C9A227; --terra:#C2542F; --navy-tint:#EEF1F7; --gold-tint:#FBF3DA;
+    --teal:#0E7C7B; --leaf:#3E7C4F; --teal-tint:#E5F2F1; --leaf-tint:#E9F3EC; --max:980px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:#EAE7DD;color:var(--ink);
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6;font-size:17px}
+  .sheet{max-width:var(--max);margin:24px auto;background:var(--paper);box-shadow:0 10px 40px rgba(20,25,40,.18);border-radius:6px;overflow:hidden}
+  .masthead{background:var(--ink);color:#fff;padding:22px 34px 26px}
+  .kicker{display:flex;align-items:center;gap:10px;font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.22em;text-transform:uppercase;color:var(--gold)}
+  .kicker .dot{width:9px;height:9px;border-radius:50%;background:var(--terra);box-shadow:0 0 0 4px rgba(194,84,47,.25)}
+  .masthead h1{font-family:Georgia,serif;font-weight:700;font-size:clamp(25px,4.4vw,39px);line-height:1.08;margin:12px 0 6px}
+  .masthead .sub{color:#C7CBD6;font-size:15px;max-width:680px}
+  .meta-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+  .chip{font:600 11.5px/1 ui-monospace,Menlo,monospace;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:999px;background:rgba(255,255,255,.08);color:#E8EAF0;border:1px solid rgba(255,255,255,.14)}
+  .chip.gold{background:var(--gold);color:#2a2300;border-color:transparent}
+  .body{padding:30px 34px 40px} section{margin:0 0 42px}
+  .eyebrow{display:inline-flex;align-items:center;gap:8px;font:700 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.16em;text-transform:uppercase;padding:7px 12px;border-radius:6px;margin-bottom:14px}
+  .eyebrow svg{width:16px;height:16px}
+  .e-war{background:var(--navy);color:#fff}.e-ai{background:var(--teal);color:#fff}.e-skill{background:var(--terra);color:#fff}.e-task{background:var(--gold);color:#332700}
+  h2.head{font-family:Georgia,serif;font-size:clamp(21px,3vw,27px);line-height:1.15;margin:.1em 0 .35em}
+  .lead{font-size:18px;color:#33373F}
+  .article{border-radius:10px;padding:22px 24px;border:1px solid var(--hair)}
+  .article.war{background:linear-gradient(180deg,var(--navy-tint),#fff);border-color:#D5DCEC}
+  .article.ai{background:linear-gradient(180deg,var(--teal-tint),#fff);border-color:#CDE6E4}
+  .article p{margin:.6em 0} .article .byline{font:600 12px/1 ui-monospace,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--soft);margin-bottom:10px}
+  .pull{font-family:Georgia,serif;font-style:italic;font-size:19px;line-height:1.4;padding:10px 0 10px 18px;margin:18px 0;color:var(--navy)}
+  .article.war .pull{border-left:4px solid var(--gold)} .article.ai .pull{border-left:4px solid var(--leaf);color:var(--teal)}
+  mark{padding:.05em .2em;border-radius:4px;font-weight:600;background:transparent}
+  .article.war mark{background:var(--gold-tint);color:#5b4a00} .article.ai mark{background:var(--leaf-tint);color:#1f5234}
+  .hero-ill{display:flex;gap:14px;align-items:stretch;margin:4px 0 20px}
+  .hero-ill .panel{flex:1;border-radius:10px;padding:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;color:#fff;min-height:120px}
+  .panel.p1{background:linear-gradient(135deg,#22335c,#10182c)}
+  .panel.vs{flex:0 0 52px;background:none;color:var(--terra);align-self:center;font-family:Georgia,serif;font-style:italic;font-size:22px;display:flex;align-items:center;justify-content:center;min-height:auto}
+  .panel.p2{background:linear-gradient(135deg,#0e7c7b,#0a5a59)}
+  .panel svg{width:46px;height:46px;margin-bottom:8px} .panel b{font-size:14px} .panel small{opacity:.85;font-size:12px}
+  .bridge{display:flex;gap:16px;align-items:flex-start;background:#fff;border:2px dashed var(--gold);border-radius:12px;padding:18px 20px;margin-top:22px}
+  .bridge svg{width:40px;height:40px;flex:0 0 40px;color:var(--terra)} .bridge h3{margin:0 0 4px;font-family:Georgia,serif;font-size:18px} .bridge p{margin:0;font-size:15.5px;color:#3a3f48}
+  .vtable{width:100%;border-collapse:collapse;font-size:15px;overflow:hidden;border-radius:10px;border:1px solid var(--hair)}
+  .vtable th{background:var(--terra);color:#fff;text-align:left;padding:11px 13px;font:700 12px/1.2 ui-monospace,Menlo,monospace;letter-spacing:.06em;text-transform:uppercase}
+  .vtable td{padding:11px 13px;border-top:1px solid var(--hair);vertical-align:top}
+  .vtable tr:nth-child(even) td{background:#FCF7F2}
+  .vtable .v{font-weight:700;color:var(--terra);white-space:nowrap} .vtable .it{color:var(--soft);font-style:italic;font-size:14px} .vtable .ex{color:#3a3f48}
+  .exwrap{border:1px solid var(--hair);border-radius:12px;padding:20px 22px;background:#fff}
+  .exwrap.war{border-top:5px solid var(--navy)} .exwrap.ai{border-top:5px solid var(--teal)}
+  .q{margin:14px 0;font-size:16px}
+  .q b.n{display:inline-block;width:26px;height:26px;line-height:26px;text-align:center;border-radius:50%;color:#fff;font-size:13px;margin-right:8px;font-family:ui-monospace,Menlo,monospace}
+  .war .q b.n{background:var(--navy)} .ai .q b.n{background:var(--teal)}
+  select.pick,input.blank{font:inherit;font-size:15px;padding:5px 9px;border-radius:7px;border:2px solid var(--hair);background:#fff;color:var(--ink);transition:.15s}
+  select.pick:focus,input.blank:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(201,162,39,.2)}
+  input.blank{width:175px;text-align:center}
+  .ok{border-color:var(--leaf)!important;background:var(--leaf-tint)!important} .no{border-color:var(--terra)!important;background:#FBEAE4!important}
+  .matchgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px 22px;margin-top:6px}
+  @media(max-width:640px){.matchgrid{grid-template-columns:1fr}}
+  .mrow{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .pill{display:inline-block;padding:6px 12px;border-radius:999px;font-weight:700;font-size:14.5px;color:#fff}
+  .c1{background:#C2542F}.c2{background:#2C6FB5}.c3{background:#3E7C4F}.c4{background:#7A4FB5}.c5{background:#C9A227;color:#3a2c00}.c6{background:#0E7C7B}.c7{background:#B5305A}.c8{background:#516170}
+  .bank{display:flex;flex-wrap:wrap;gap:9px;background:linear-gradient(135deg,var(--gold-tint),#fff);border:1px dashed var(--gold);border-radius:12px;padding:14px 16px;margin:6px 0 18px}
+  .bank .tag{font-size:13px;font-weight:700;color:var(--soft);letter-spacing:.08em;text-transform:uppercase;align-self:center;margin-right:4px}
+  .word{padding:6px 13px;border-radius:8px;font-weight:700;font-size:14.5px;color:#fff;box-shadow:0 2px 0 rgba(0,0,0,.08)}
+  .toolbar{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+  button.tool{font:700 14px/1 inherit;border:none;cursor:pointer;padding:11px 16px;border-radius:9px;color:#fff;transition:.15s;display:inline-flex;align-items:center;gap:7px}
+  button.tool svg{width:16px;height:16px}
+  .b-check{background:var(--leaf)} .b-reset{background:#8A8377} .b-print{background:var(--terra)}
+  .score{font-weight:700;color:var(--navy);align-self:center;margin-left:4px}
+  .srcbox{border:1px solid var(--hair);border-left:5px solid var(--gold);border-radius:10px;padding:4px 18px;background:#FDFCF7;margin-top:8px}
+  .src{display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--hair);font-size:15px}
+  .src:first-child{border-top:none} .src .si{flex:0 0 26px;height:26px;border-radius:6px;color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700}
+  .src .si.v{background:var(--terra)} .src .si.a{background:var(--teal);font-family:Georgia,serif}
+  .src a{color:var(--navy);word-break:break-all}
+  .key{background:#1A1D24;color:#E8EAF0;border-radius:12px;padding:4px 24px 22px;margin-top:30px}
+  .key summary{cursor:pointer;font:700 14px/1 ui-monospace,Menlo,monospace;letter-spacing:.1em;text-transform:uppercase;color:var(--gold);padding:18px 0 14px;list-style:none}
+  .key summary::-webkit-details-marker{display:none} .key summary::before{content:"🔑  "}
+  .key h4{color:var(--gold);margin:18px 0 6px;font-size:14px;letter-spacing:.05em;text-transform:uppercase}
+  .key ol,.key ul{margin:.2em 0;padding-left:22px;color:#D7DAE3;font-size:14.5px} .key li{margin:3px 0}
+  .footer{padding:20px 34px 30px;color:var(--soft);font-size:13px;border-top:1px solid var(--hair)}
+  .note{background:#FBF3DA;border:1px solid var(--gold);border-radius:10px;padding:12px 15px;font-size:14px;color:#5b4a00;margin:14px 0}
+  @media print{body{background:#fff}.sheet{box-shadow:none;margin:0}.toolbar{display:none!important}.key{background:#fff;color:#000;border:2px solid #000}.key summary,.key h4{color:#000}.key ol,.key ul,.key li{color:#000}.key[open] summary{display:none}section{break-inside:avoid}}
+</style>
+</head>
+<body>
+<div class="sheet">
+  <header class="masthead">
+    <div class="kicker"><span class="dot"></span> Enfoque Dominical · Laboratorio de Lectura</div>
+    <h1>El Papa, el Presidente y el futuro que elegimos</h1>
+    <p class="sub">Dos noticias, una gran pregunta: ¿qué significa <em>poner a las personas primero</em>, en tiempos de guerra y en la era de la inteligencia artificial?</p>
+    <div class="meta-row">
+      <span class="chip gold">Nivel&nbsp;B1–B2</span><span class="chip">Lectura + Vocabulario</span>
+      <span class="chip">Informar noticias</span><span class="chip">≈ 75&nbsp;min</span>
+    </div>
+  </header>
+  <div class="body">
+
+    <section>
+      <span class="eyebrow e-task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg> Antes de leer</span>
+      <h2 class="head">Para empezar — habla con un compañero</h2>
+      <div class="hero-ill">
+        <div class="panel p1"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 20V8l8-4 8 4v12"/><path d="M9 20v-6h6v6"/></svg><b>Un Presidente</b><small>habla de guerra y poder</small></div>
+        <div class="panel vs">vs.</div>
+        <div class="panel p2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v18"/><path d="M5 8c4-3 10-3 14 0"/><path d="M5 8v6c4-3 10-3 14 0V8"/></svg><b>Un Papa</b><small>habla de paz y personas</small></div>
+      </div>
+      <ol>
+        <li>Cuando dos líderes envían <strong>mensajes opuestos</strong> sobre el mismo problema, ¿a quién escucha la gente y por qué?</li>
+        <li>¿Deben los líderes religiosos hablar de <strong>guerra</strong> y <strong>tecnología</strong>, o mantenerse al margen de la política?</li>
+        <li>¿Qué crees que significa la expresión <em>«centrado en el ser humano»</em>?</li>
+      </ol>
+    </section>
+
+    <section>
+      <span class="eyebrow e-war"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l18-5v6L3 17z"/></svg> Artículo 1 · Sobre la guerra y la paz</span>
+      <h2 class="head">El Papa y el Presidente: mensajes enfrentados sobre la guerra</h2>
+      <div class="article war">
+        <p class="byline">Mesa de redacción · Reportaje «Enfoque Dominical»</p>
+        <p>Durante un viaje internacional de gran repercusión, un programa de noticias destacó el contraste entre dos de las voces más observadas del mundo. El segmento, titulado <em>«Mensajes enfrentados del Papa y el Presidente sobre la guerra»</em>, informó de que la visita había quedado <mark>eclipsada por la guerra</mark> que dominaba los titulares.</p>
+        <p>Según el reportaje, el <strong>papa León XIV</strong> —el primer papa nacido en Estados Unidos, elegido en 2025— ha <mark>pedido</mark> repetidamente un alto el fuego, el diálogo entre enemigos y la protección de los civiles. Ha presentado la paz no como política, sino como un <strong>deber moral</strong>, e <mark>ha instado</mark> a los poderosos a elegir la negociación antes que la fuerza.</p>
+        <p class="pull">«El Papa y el Presidente no leen el mismo guion.»</p>
+        <p>El presidente <strong>Donald Trump</strong>, según el reportaje, ha <mark>subrayado</mark> la fuerza y la disuasión, sosteniendo que la paz duradera nace de negociar desde una posición de poder y que lo que termina los conflictos es la presión, no las súplicas. Los analistas señalaron que ambos líderes <mark>establecían un fuerte contraste</mark> de tono, aunque los dos dijeran querer el fin de los combates.</p>
+        <p>La emisión describió el resultado como <mark>mensajes enfrentados</mark>: una voz <mark>expresaba preocupación</mark> por el coste humano de la guerra; la otra <mark>marcaba el tono</mark> de un enfoque más duro.</p>
+      </div>
+      <div class="note">📺 <strong>Nota para el docente:</strong> texto didáctico elaborado a partir del segmento de NBC «Sunday Focus» y de información pública sobre el papa León XIV. Reproduce el clip y luego lee: los alumnos comparan lo que <em>oyen</em> con lo que <em>leen</em>.</div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="5" width="14" height="14" rx="3"/><path d="M9 9h6v6H9z"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg> Artículo 2 · Sobre la tecnología y las personas</span>
+      <h2 class="head">Italia vincula su normativa de IA a la visión humanista del Papa</h2>
+      <div class="article ai">
+        <p class="byline">Decode39 · Tecnología y política</p>
+        <p>Italia se ha convertido en el <strong>primer país de la Unión Europea</strong> en aprobar una ley nacional integral sobre inteligencia artificial. Según <em>Decode39</em>, el gobierno ha <mark>vinculado</mark> abiertamente la nueva normativa a la <strong>visión «centrada en el ser humano» del papa León XIV</strong>.</p>
+        <p>La idea central es sencilla: la IA debe <mark>servir</mark> a las personas, no sustituir el juicio humano. La ley <mark>destaca</mark> la supervisión humana, la protección de los trabajadores y los niños, y el respeto de los derechos fundamentales. Sus defensores afirman que está diseñada para <mark>salvaguardar</mark> la dignidad humana a medida que las máquinas se vuelven más potentes.</p>
+        <p class="pull">«La tecnología debe poner a la persona en el centro, no al algoritmo.»</p>
+        <p>La conexión con el Papa es deliberada. Al tomar el nombre de <strong>León</strong>, evocó a León XIII, que abordó las convulsiones de la revolución industrial hace más de un siglo. El papa León XIV ha <mark>advertido</mark> de que la inteligencia artificial es el desafío decisivo para la dignidad humana de nuestro tiempo, e <mark>ha instado</mark> a los líderes a que la innovación no deje a nadie atrás.</p>
+        <p>Las autoridades italianas <mark>sostuvieron</mark> que <mark>encontrar puntos en común</mark> entre una tecnología veloz y unos valores humanos permanentes es precisamente el objetivo de las nuevas reglas.</p>
+      </div>
+      <div class="note">📰 <strong>Nota:</strong> texto parafraseado del artículo de Decode39 «Italia vincula su normativa de IA a la visión humanista del papa León XIV» y de declaraciones públicas. Combínalo con el segundo vídeo como calentamiento de comprensión auditiva.</div>
+      <div class="bridge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 12h18"/><path d="M7 12a4 4 0 0 1 4-4M17 12a4 4 0 0 1-4 4"/><circle cx="5" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg>
+        <div><h3>El vínculo entre las dos noticias</h3>
+        <p>En ambas noticias el Papa defiende el <em>mismo</em> argumento en escenarios distintos. Ante la violencia de la <strong>guerra</strong> y la disrupción de la <strong>tecnología</strong>, vuelve siempre a una palabra: <strong>humano</strong>. Ya sea un misil o un algoritmo, su mensaje es que las personas —su dignidad, su seguridad, su futuro— deben permanecer en el centro.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-skill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 5h16v11H7l-3 3z"/><path d="M8 9h8M8 12h5"/></svg> Foco lingüístico · Verbos para informar noticias</span>
+      <h2 class="head">Cómo informan los periodistas de lo que dicen las personas</h2>
+      <p class="lead">Los periodistas rara vez escriben «dijo». Eligen un verbo que indica <em>cómo</em> se dijo algo. Cada uno transmite una actitud distinta.</p>
+      <table class="vtable">
+        <tr><th>Verbo (informar)</th><th>Significa…</th><th>Italiano</th><th>Ejemplo de la noticia</th></tr>
+        <tr><td class="v">pedir / reclamar</td><td>exigir o solicitar públicamente</td><td class="it">chiedere, invocare</td><td class="ex">El Papa <em>pidió</em> un alto el fuego inmediato.</td></tr>
+        <tr><td class="v">instar / exhortar</td><td>animar con fuerza a actuar</td><td class="it">esortare, sollecitare</td><td class="ex">El Papa <em>instó</em> a no dejar a nadie atrás.</td></tr>
+        <tr><td class="v">subrayar / recalcar</td><td>dar especial importancia a algo</td><td class="it">sottolineare</td><td class="ex">Trump <em>subrayó</em> la fuerza y la disuasión.</td></tr>
+        <tr><td class="v">advertir</td><td>avisar de un peligro</td><td class="it">avvertire</td><td class="ex">El Papa <em>advirtió</em> de los riesgos de la IA.</td></tr>
+        <tr><td class="v">destacar / resaltar</td><td>llamar la atención sobre algo</td><td class="it">evidenziare</td><td class="ex">La ley <em>destaca</em> la supervisión humana.</td></tr>
+        <tr><td class="v">sostener / argumentar</td><td>dar razones a favor de una postura</td><td class="it">sostenere</td><td class="ex">Las autoridades <em>sostuvieron</em> que los valores guían la tecnología.</td></tr>
+        <tr><td class="v">expresar preocupación</td><td>manifestar inquietud en público</td><td class="it">sollevare preoccupazioni</td><td class="ex">El reportaje <em>expresó preocupación</em> por los civiles.</td></tr>
+        <tr><td class="v">eclipsar / ensombrecer</td><td>ser tan grande que desvía la atención</td><td class="it">mettere in ombra</td><td class="ex">La guerra <em>eclipsó</em> la visita.</td></tr>
+      </table>
+
+      <div class="exwrap war" style="margin-top:22px" id="exA">
+        <span class="eyebrow e-task" style="margin-bottom:10px">Ejercicio A · Elige el verbo</span>
+        <p style="margin-top:4px;color:var(--soft)">Selecciona el verbo que mejor encaja en cada frase periodística.</p>
+        <div class="q"><b class="n">1</b> El Papa ______ la paz y la protección de los civiles.
+          <select class="pick" data-a="pidió"><option value="">— elige —</option><option>pidió</option><option>eclipsó</option><option>destacó</option></select></div>
+        <div class="q"><b class="n">2</b> ______ que la inteligencia artificial es un grave riesgo para la dignidad humana.
+          <select class="pick" data-a="Advirtió"><option value="">— elige —</option><option>Subrayó</option><option>Advirtió</option><option>Pidió</option></select></div>
+        <div class="q"><b class="n">3</b> El presidente Trump ______ la importancia de negociar desde la fuerza.
+          <select class="pick" data-a="subrayó"><option value="">— elige —</option><option>subrayó</option><option>advirtió</option><option>eclipsó</option></select></div>
+        <div class="q"><b class="n">4</b> El conflicto ______ todo el viaje del presidente.
+          <select class="pick" data-a="eclipsó"><option value="">— elige —</option><option>instó</option><option>eclipsó</option><option>destacó</option></select></div>
+        <div class="q"><b class="n">5</b> El gobierno italiano ______ que los valores humanos deben guiar la tecnología.
+          <select class="pick" data-a="sostuvo"><option value="">— elige —</option><option>sostuvo</option><option>eclipsó</option><option>advirtió</option></select></div>
+        <div class="q"><b class="n">6</b> El Papa ______ a los líderes a no dejar atrás a la gente común.
+          <select class="pick" data-a="instó"><option value="">— elige —</option><option>eclipsó</option><option>instó</option><option>expresó</option></select></div>
+        <div class="toolbar">
+          <button class="tool b-check" onclick="checkPick('exA')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Comprobar</button>
+          <button class="tool b-reset" onclick="resetEx('exA')">Reiniciar</button><span class="score" id="exA-score"></span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-war"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h7v7M20 17h-7v-7"/><path d="M4 7l16 10"/></svg> Ejercicio B · Relaciona la expresión (guerra)</span>
+      <h2 class="head">Une cada expresión con su significado</h2>
+      <div class="exwrap war" id="exB">
+        <div class="matchgrid">
+          <div class="mrow"><span class="pill c1">mensajes enfrentados</span>
+            <select class="pick" data-a="A"><option value="">= ?</option><option value="A">dos mensajes públicos opuestos</option><option value="B">una visita con grandes consecuencias</option><option value="C">volverse más importante y desviar la atención</option><option value="D">manifestar inquietud en público</option></select></div>
+          <div class="mrow"><span class="pill c2">eclipsar</span>
+            <select class="pick" data-a="C"><option value="">= ?</option><option value="A">dos mensajes públicos opuestos</option><option value="B">una visita con grandes consecuencias</option><option value="C">volverse más importante y desviar la atención</option><option value="D">manifestar inquietud en público</option></select></div>
+          <div class="mrow"><span class="pill c3">pedir / reclamar</span>
+            <select class="pick" data-a="E"><option value="">= ?</option><option value="E">exigir algo públicamente</option><option value="F">establecer el ambiente o el rumbo</option><option value="G">mostrar una diferencia clara</option><option value="H">influir en la conversación</option></select></div>
+          <div class="mrow"><span class="pill c4">expresar preocupación</span>
+            <select class="pick" data-a="D"><option value="">= ?</option><option value="A">dos mensajes públicos opuestos</option><option value="B">una visita con grandes consecuencias</option><option value="C">volverse más importante y desviar la atención</option><option value="D">manifestar inquietud en público</option></select></div>
+          <div class="mrow"><span class="pill c5">marcar el tono</span>
+            <select class="pick" data-a="F"><option value="">= ?</option><option value="E">exigir algo públicamente</option><option value="F">establecer el ambiente o el rumbo</option><option value="G">mostrar una diferencia clara</option><option value="H">influir en la conversación</option></select></div>
+          <div class="mrow"><span class="pill c7">establecer un contraste</span>
+            <select class="pick" data-a="G"><option value="">= ?</option><option value="E">exigir algo públicamente</option><option value="F">establecer el ambiente o el rumbo</option><option value="G">mostrar una diferencia clara</option><option value="H">influir en la conversación</option></select></div>
+          <div class="mrow"><span class="pill c8">un viaje trascendental</span>
+            <select class="pick" data-a="B"><option value="">= ?</option><option value="A">dos mensajes públicos opuestos</option><option value="B">una visita con grandes consecuencias</option><option value="C">volverse más importante y desviar la atención</option><option value="D">manifestar inquietud en público</option></select></div>
+          <div class="mrow"><span class="pill c6">moldear el debate</span>
+            <select class="pick" data-a="H"><option value="">= ?</option><option value="E">exigir algo públicamente</option><option value="F">establecer el ambiente o el rumbo</option><option value="G">mostrar una diferencia clara</option><option value="H">influir en la conversación</option></select></div>
+        </div>
+        <div class="toolbar"><button class="tool b-check" onclick="checkPick('exB')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Comprobar</button><button class="tool b-reset" onclick="resetEx('exB')">Reiniciar</button><span class="score" id="exB-score"></span></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-war"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h16"/></svg> Ejercicio C · Completa los huecos (guerra)</span>
+      <h2 class="head">Completa el reportaje</h2>
+      <div class="bank"><span class="tag">Banco de palabras</span>
+        <span class="word c1">eclipsó</span><span class="word c2">enfrentados</span><span class="word c3">pidió</span>
+        <span class="word c4">preocupación</span><span class="word c5">marcó</span><span class="word c7">deber</span></div>
+      <div class="exwrap war" id="exC">
+        <p class="q"><b class="n">1</b> Los líderes enviaron mensajes <input class="blank" data-a="enfrentados">.</p>
+        <p class="q"><b class="n">2</b> La guerra ______ por completo la visita del presidente: <input class="blank" data-a="eclipsó"></p>
+        <p class="q"><b class="n">3</b> El papa León XIV ______ un alto el fuego inmediato: <input class="blank" data-a="pidió"></p>
+        <p class="q"><b class="n">4</b> Para él, la paz no es política sino un ______ moral: <input class="blank" data-a="deber"></p>
+        <p class="q"><b class="n">5</b> El reportaje expresó ______ por la seguridad de los civiles: <input class="blank" data-a="preocupación"></p>
+        <p class="q"><b class="n">6</b> El tono más duro del presidente ______ el rumbo del debate: <input class="blank" data-a="marcó"></p>
+        <div class="toolbar"><button class="tool b-check" onclick="checkBlank('exC')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Comprobar</button><button class="tool b-reset" onclick="resetEx('exC')">Reiniciar</button><span class="score" id="exC-score"></span></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h7v7M20 17h-7v-7"/><path d="M4 7l16 10"/></svg> Ejercicio D · Relaciona la expresión (IA)</span>
+      <h2 class="head">Une cada expresión con su significado</h2>
+      <div class="exwrap ai" id="exD">
+        <div class="matchgrid">
+          <div class="mrow"><span class="pill c6">centrado en el ser humano</span>
+            <select class="pick" data-a="A"><option value="">= ?</option><option value="A">que pone a las personas primero</option><option value="B">un conjunto de reglas oficiales</option><option value="C">proteger / mantener a salvo</option><option value="D">conectar una cosa con otra</option></select></div>
+          <div class="mrow"><span class="pill c2">una normativa</span>
+            <select class="pick" data-a="B"><option value="">= ?</option><option value="A">que pone a las personas primero</option><option value="B">un conjunto de reglas oficiales</option><option value="C">proteger / mantener a salvo</option><option value="D">conectar una cosa con otra</option></select></div>
+          <div class="mrow"><span class="pill c3">salvaguardar</span>
+            <select class="pick" data-a="C"><option value="">= ?</option><option value="A">que pone a las personas primero</option><option value="B">un conjunto de reglas oficiales</option><option value="C">proteger / mantener a salvo</option><option value="D">conectar una cosa con otra</option></select></div>
+          <div class="mrow"><span class="pill c5">vincular A con B</span>
+            <select class="pick" data-a="D"><option value="">= ?</option><option value="A">que pone a las personas primero</option><option value="B">un conjunto de reglas oficiales</option><option value="C">proteger / mantener a salvo</option><option value="D">conectar una cosa con otra</option></select></div>
+          <div class="mrow"><span class="pill c4">supervisión humana</span>
+            <select class="pick" data-a="E"><option value="">= ?</option><option value="E">personas que controlan las máquinas</option><option value="F">derechos básicos de todos</option><option value="G">acuerdo compartido entre dos partes</option><option value="H">el reto más importante de la época</option></select></div>
+          <div class="mrow"><span class="pill c1">derechos fundamentales</span>
+            <select class="pick" data-a="F"><option value="">= ?</option><option value="E">personas que controlan las máquinas</option><option value="F">derechos básicos de todos</option><option value="G">acuerdo compartido entre dos partes</option><option value="H">el reto más importante de la época</option></select></div>
+          <div class="mrow"><span class="pill c7">puntos en común</span>
+            <select class="pick" data-a="G"><option value="">= ?</option><option value="E">personas que controlan las máquinas</option><option value="F">derechos básicos de todos</option><option value="G">acuerdo compartido entre dos partes</option><option value="H">el reto más importante de la época</option></select></div>
+          <div class="mrow"><span class="pill c8">el desafío decisivo</span>
+            <select class="pick" data-a="H"><option value="">= ?</option><option value="E">personas que controlan las máquinas</option><option value="F">derechos básicos de todos</option><option value="G">acuerdo compartido entre dos partes</option><option value="H">el reto más importante de la época</option></select></div>
+        </div>
+        <div class="toolbar"><button class="tool b-check" onclick="checkPick('exD')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Comprobar</button><button class="tool b-reset" onclick="resetEx('exD')">Reiniciar</button><span class="score" id="exD-score"></span></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-ai"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7h16M4 12h10M4 17h16"/></svg> Ejercicio E · Completa los huecos (IA)</span>
+      <h2 class="head">Completa el reportaje tecnológico</h2>
+      <div class="bank"><span class="tag">Banco de palabras</span>
+        <span class="word c6">centrada</span><span class="word c2">normativa</span><span class="word c3">salvaguardar</span>
+        <span class="word c5">vinculó</span><span class="word c4">supervisión</span><span class="word c1">advirtió</span></div>
+      <div class="exwrap ai" id="exE">
+        <p class="q"><b class="n">1</b> Italia aprobó la primera ______ nacional de IA de la UE: <input class="blank" data-a="normativa"></p>
+        <p class="q"><b class="n">2</b> El gobierno ______ la ley a la visión del Papa: <input class="blank" data-a="vinculó"></p>
+        <p class="q"><b class="n">3</b> Las reglas buscan ser una normativa ______ en el ser humano: <input class="blank" data-a="centrada"></p>
+        <p class="q"><b class="n">4</b> La ley exige ______ humana de los sistemas potentes: <input class="blank" data-a="supervisión"></p>
+        <p class="q"><b class="n">5</b> Su objetivo es ______ la dignidad humana: <input class="blank" data-a="salvaguardar"></p>
+        <p class="q"><b class="n">6</b> El Papa ______ que la IA es el desafío decisivo de nuestro tiempo: <input class="blank" data-a="advirtió"></p>
+        <div class="toolbar"><button class="tool b-check" onclick="checkBlank('exE')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Comprobar</button><button class="tool b-reset" onclick="resetEx('exE')">Reiniciar</button><span class="score" id="exE-score"></span></div>
+      </div>
+    </section>
+
+    <section>
+      <span class="eyebrow e-task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H8l-5 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg> Después de leer · Hablar y escribir</span>
+      <h2 class="head">Establece la conexión</h2>
+      <ol>
+        <li>Con tus palabras, ¿cuáles son los «mensajes enfrentados» de la primera noticia?</li>
+        <li>¿Por qué relacionó Italia una <em>ley de IA</em> con una visión <em>religiosa</em>?</li>
+        <li><strong>Une las noticias:</strong> el Papa habla de <em>guerra</em> y de <em>IA</em>. ¿Qué palabra conecta los dos artículos?</li>
+        <li><strong>Infórmalo tú:</strong> imagina que eres periodista. Escribe tres frases sobre la noticia de hoy usando tres verbos distintos (p. ej. <em>instar, advertir, subrayar, pedir, destacar, sostener</em>).</li>
+        <li>¿Estás de acuerdo en que la tecnología debe estar «centrada en el ser humano»? ¿Debería guiar también las decisiones sobre la guerra? ¿Por qué?</li>
+      </ol>
+    </section>
+
+    <section>
+      <span class="eyebrow e-task"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg> Ver y leer · Fuentes</span>
+      <h2 class="head">Las noticias originales de esta lección</h2>
+      <div class="srcbox">
+        <div class="src"><span class="si v">▶</span><div><b>Vídeo 1 — Mensajes enfrentados del Papa y el Presidente sobre la guerra</b> (NBC News, «Sunday Focus»)<br><a href="https://youtu.be/Su2ytdmTxO0">https://youtu.be/Su2ytdmTxO0</a></div></div>
+        <div class="src"><span class="si v">▶</span><div><b>Vídeo 2 — El papa León XIV y una visión humanista de la tecnología</b><br><a href="https://youtu.be/PfBWnRzmwwo">https://youtu.be/PfBWnRzmwwo</a></div></div>
+        <div class="src"><span class="si a">¶</span><div><b>Artículo — «Italia vincula su normativa de IA a la visión humanista del papa León XIV»</b> (Decode39)<br><a href="https://decode39.com/15201/italy-ties-ai-rulebook-to-pope-leo-xivs-human-centered-vision/">https://decode39.com/15201/italy-ties-ai-rulebook-to-pope-leo-xivs-human-centered-vision/</a></div></div>
+      </div>
+    </section>
+
+    <details class="key">
+      <summary>Solucionario del profesor — toca para revelar</summary>
+      <h4>Ejercicio A — verbos</h4>
+      <ol><li>pidió</li><li>Advirtió</li><li>subrayó</li><li>eclipsó</li><li>sostuvo</li><li>instó</li></ol>
+      <h4>Ejercicio B — relacionar (guerra)</h4>
+      <ul><li>mensajes enfrentados → dos mensajes públicos opuestos</li><li>eclipsar → volverse más importante y desviar la atención</li><li>pedir / reclamar → exigir algo públicamente</li><li>expresar preocupación → manifestar inquietud en público</li><li>marcar el tono → establecer el ambiente o el rumbo</li><li>establecer un contraste → mostrar una diferencia clara</li><li>un viaje trascendental → una visita con grandes consecuencias</li><li>moldear el debate → influir en la conversación</li></ul>
+      <h4>Ejercicio C — huecos (guerra)</h4>
+      <ol><li>enfrentados</li><li>eclipsó</li><li>pidió</li><li>deber</li><li>preocupación</li><li>marcó</li></ol>
+      <h4>Ejercicio D — relacionar (IA)</h4>
+      <ul><li>centrado en el ser humano → que pone a las personas primero</li><li>una normativa → un conjunto de reglas oficiales</li><li>salvaguardar → proteger / mantener a salvo</li><li>vincular A con B → conectar una cosa con otra</li><li>supervisión humana → personas que controlan las máquinas</li><li>derechos fundamentales → derechos básicos de todos</li><li>puntos en común → acuerdo compartido entre dos partes</li><li>el desafío decisivo → el reto más importante de la época</li></ul>
+      <h4>Ejercicio E — huecos (IA)</h4>
+      <ol><li>normativa</li><li>vinculó</li><li>centrada</li><li>supervisión</li><li>salvaguardar</li><li>advirtió</li></ol>
+      <h4>Debate (P3) — el vínculo</h4>
+      <p style="color:#D7DAE3;font-size:14.5px">La palabra que conecta es <strong>«humano / centrado en el ser humano».</strong> En ambas noticias el Papa sostiene que la dignidad y la seguridad de las personas deben permanecer en el centro, ya sea ante la guerra o ante la tecnología.</p>
+    </details>
+
+    <div class="toolbar" style="margin-top:24px">
+      <button class="tool b-print" onclick="window.print()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9V2h12v7M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><path d="M6 14h12v8H6z"/></svg>Imprimir / Guardar PDF</button>
+    </div>
+  </div>
+  <div class="footer"><strong>Enfoque Dominical · Laboratorio de Lectura</strong> — material para uso en el aula. Los textos son paráfrasis didácticas basadas en el vídeo y el artículo citados; verifica las citas literales con las fuentes originales antes de evaluar.</div>
+</div>
+<script>
+  function clr(el){el.classList.remove('ok','no');}
+  function checkPick(id){const ex=document.getElementById(id);const p=ex.querySelectorAll('select.pick');let r=0;
+    p.forEach(s=>{clr(s);if(s.value&&s.value===s.dataset.a){s.classList.add('ok');r++;}else if(s.value){s.classList.add('no');}});score(id,r,p.length);}
+  function checkBlank(id){const ex=document.getElementById(id);const b=ex.querySelectorAll('input.blank');let r=0;
+    b.forEach(i=>{clr(i);const v=i.value.trim().toLowerCase();if(v&&v===i.dataset.a.toLowerCase()){i.classList.add('ok');r++;}else if(v){i.classList.add('no');}});score(id,r,b.length);}
+  function resetEx(id){const ex=document.getElementById(id);ex.querySelectorAll('select.pick').forEach(s=>{s.value='';clr(s);});ex.querySelectorAll('input.blank').forEach(i=>{i.value='';clr(i);});document.getElementById(id+'-score').textContent='';}
+  function score(id,r,t){const el=document.getElementById(id+'-score');el.textContent=`★ ${r} / ${t} correctas`;el.style.color=r===t?'#3E7C4F':'#C2542F';}
+</script>
+</body>
+</html>
